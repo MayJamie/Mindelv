@@ -1,3 +1,5 @@
+/** @format */
+
 module.exports = {
-  extends: ["custom/react-internal"],
+    extends: ['custom/react-internal'],
 };

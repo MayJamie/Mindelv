@@ -1,3 +1,5 @@
+/** @format */
+
 module.exports = {
-  extends: ["custom/next"],
+    extends: ['custom/next'],
 };

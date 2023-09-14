@@ -1,9 +1,9 @@
 {
-  "name": "shared-server",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint .",
-    "generate:component": "turbo gen react-component"
-  }
+    "name": "shared-server",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint .",
+        "generate:component": "turbo gen react-component"
+    }
 }
