@@ -1,19 +1,21 @@
 {
+    "name": "ideffect-monorepo",
     "private": true,
     "scripts": {
         "build": "turbo run build",
         "dev": "turbo run dev",
-        "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "lint": "turbo run lint",
         "pretty": "npx prettier --write",
-        "pretty:all": "npm run pretty ."
+        "pretty:all": "npm run pretty .",
+        "sort-package-json": "npx sort-package-json \"package.json\" \"packages/*/package.json\" \"apps/*/package.json\""
     },
-    "devDependencies": {
+    "dependencies": {
+        "@manypkg/cli": "latest",
         "eslint": "^8.48.0",
         "prettier": "^3.0.3",
         "tsconfig": "workspace:*",
         "turbo": "latest"
     },
-    "packageManager": "pnpm@8.6.10",
-    "name": "ideffect-monorepo"
+    "packageManager": "pnpm@8.6.10"
 }
