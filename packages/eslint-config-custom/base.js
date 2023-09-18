@@ -1,12 +1,6 @@
 /** @format */
 
 module.exports = {
-    parserOptions: {
-        babelOptions: {
-            presets: [require.resolve('next/babel')],
-        },
-    },
-    // add rules configurations here
     rules: {
         'import/extensions': [
             'error',
@@ -19,12 +13,11 @@ module.exports = {
             },
         ],
         'no-return-await': 'off',
-        camelcase: 'off',
+        camelcase: 'warn',
         'no-underscore-dangle': 'off',
         'import/prefer-default-export': 'off',
         'import/no-default-export': 'off',
-        'react/require-default-props': 'off',
-        'import/order': 'off',
+        'import/order': 'warn',
         'react/function-component-definition': [
             'error',
             {
@@ -33,13 +26,14 @@ module.exports = {
             },
         ],
         'react/jsx-filename-extension': ['off', { extensions: ['.js', '.jsx'] }],
-        'no-undef': 'off',
-        'no-shadow': 'off',
-        '@typescript-eslint/no-shadow': 'error',
-        'no-unused-vars': 'off',
+        'no-undef': 'warn',
+        'no-shadow': 'warn',
+        'no-unused-vars': 'warn',
+        'unicorn/filename-case': 'off',
+        '@typescript-eslint/no-shadow': 'warn',
         '@typescript-eslint/no-unused-vars': ['error'],
         '@typescript-eslint/no-explicit-any': 'error',
-        'unicorn/filename-case': 'off',
+        '@typescript-eslint/naming-convention': 'off',
     },
     overrides: [
         {

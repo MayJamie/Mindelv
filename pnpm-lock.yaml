@@ -156,7 +156,14 @@ importers:
         specifier: ^5.0.0
         version: 5.2.2
 
-  packages/shared-constants: {}
+  packages/shared-constants:
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
 
   packages/shared-server:
     devDependencies:
