@@ -2,11 +2,17 @@
     "name": "shared-client",
     "version": "0.0.0",
     "license": "MIT",
-    "main": "./index.tsx",
-    "types": "./index.tsx",
+    "main": "./index.ts",
+    "types": "./index.types.ts",
     "scripts": {
         "generate:component": "turbo gen react-component",
         "lint": "eslint ."
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.14.9",
+        "@mui/material": "^5.14.9"
     },
     "devDependencies": {
         "@turbo/gen": "^1.10.12",
@@ -15,6 +21,7 @@
         "@types/react-dom": "^18.2.0",
         "eslint-config-custom": "workspace:*",
         "react": "^18.2.0",
+        "shared-constants": "workspace:*",
         "tsconfig": "workspace:*",
         "typescript": "^5.0.0"
     }

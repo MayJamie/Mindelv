@@ -2,8 +2,12 @@
     "name": "shared-server",
     "version": "0.0.0",
     "license": "MIT",
+    "main": "./index.ts",
+    "types": "./index.types.ts",
     "scripts": {
-        "generate:component": "turbo gen react-component",
         "lint": "eslint ."
+    },
+    "devDependencies": {
+        "shared-constants": "workspace:*"
     }
 }
