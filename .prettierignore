@@ -1,7 +1,3 @@
-# other
-/.history/
-/git_ignore/
-
 # dependencies
 /node_modules
 /.pnp
@@ -20,6 +16,7 @@
 # misc
 .DS_Store
 *.pem
+pnpm-lock.yaml
 
 # debug
 npm-debug.log*
