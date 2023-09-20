@@ -5,9 +5,10 @@
     "main": "./index.ts",
     "types": "./index.types.ts",
     "scripts": {
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix ."
     },
     "devDependencies": {
-        "shared-constants": "workspace:*"
+        "shared-lib": "workspace:*"
     }
 }

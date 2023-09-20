@@ -6,7 +6,8 @@
     "types": "./index.types.ts",
     "scripts": {
         "generate:component": "turbo gen react-component",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix ."
     },
     "dependencies": {
         "@emotion/react": "^11.11.1",
@@ -21,7 +22,7 @@
         "@types/react-dom": "^18.2.0",
         "eslint-config-custom": "workspace:*",
         "react": "^18.2.0",
-        "shared-constants": "workspace:*",
+        "shared-lib": "workspace:*",
         "tsconfig": "workspace:*",
         "typescript": "^5.0.0"
     }

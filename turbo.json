@@ -9,6 +9,7 @@
             "dotEnv": [".env.production.local", ".env.local", ".env.production", ".env"]
         },
         "lint": {},
+        "lint:fix": {},
         "dev": {
             "cache": false,
             "persistent": true,

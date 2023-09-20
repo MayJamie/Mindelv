@@ -1,10 +1,11 @@
 {
-    "name": "shared-constants",
+    "name": "shared-lib",
     "version": "0.0.0",
     "license": "MIT",
     "main": "./index.ts",
     "scripts": {
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix ."
     },
     "devDependencies": {
         "eslint-config-custom": "workspace:*",

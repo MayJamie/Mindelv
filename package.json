@@ -7,6 +7,8 @@
         "dev": "turbo run dev",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "lint": "turbo run lint",
+        "lint:fix": "turbo run lint:fix",
+        "prepare": "husky install",
         "pretty": "npx prettier --write",
         "pretty:all": "npm run pretty .",
         "sort-package-json": "npx sort-package-json \"package.json\" \"packages/*/package.json\" \"apps/*/package.json\""
@@ -17,6 +19,12 @@
         "prettier": "^3.0.3",
         "tsconfig": "workspace:*",
         "turbo": "latest"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^17.7.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^14.0.1"
     },
     "packageManager": "pnpm@8.6.10"
 }
