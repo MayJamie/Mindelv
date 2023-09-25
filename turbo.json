@@ -8,8 +8,8 @@
             "outputs": [".next/**", "!.next/cache/**"],
             "dotEnv": [".env.production.local", ".env.local", ".env.production", ".env"]
         },
-        "lint": {},
-        "lint:fix": {},
+        "lint": { "outputs": [] },
+        "lint:fix": { "outputs": [] },
         "dev": {
             "cache": false,
             "persistent": true,

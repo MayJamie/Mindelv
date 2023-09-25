@@ -21,6 +21,7 @@ module.exports = {
         '@vercel/style-guide/eslint/react',
         '@vercel/style-guide/eslint/next',
         'eslint-config-turbo',
+        'prettier',
         './base.js',
     ].map(require.resolve),
     parserOptions: {

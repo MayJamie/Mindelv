@@ -17,6 +17,7 @@
         "@manypkg/cli": "latest",
         "eslint": "^8.48.0",
         "prettier": "^3.0.3",
+        "prettier-plugin-organize-imports": "^3.2.2",
         "tsconfig": "workspace:*",
         "turbo": "latest"
     },

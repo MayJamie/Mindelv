@@ -15,7 +15,20 @@
         "preserveWatchOutput": true,
         "skipLibCheck": true,
         "strict": true,
-        "strictNullChecks": true
+        "strictNullChecks": true,
+        "target": "ES6",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "noEmit": true,
+        "module": "commonjs",
+        "resolveJsonModule": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "preserveSymlinks": true,
+        "typeRoots": ["node_modules/@types", "./src/types/*"],
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": "."
     },
     "exclude": ["node_modules"]
 }
