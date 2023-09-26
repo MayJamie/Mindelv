@@ -1,5 +1,7 @@
 /** @format */
 
+'use client';
+
 import Image from 'next/image';
 import { Card } from 'shared-client';
 import styles from './page.module.css';

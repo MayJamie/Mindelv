@@ -24,7 +24,6 @@
         "resolveJsonModule": true,
         "jsx": "preserve",
         "incremental": true,
-        "preserveSymlinks": true,
         "typeRoots": ["node_modules/@types", "./src/types/*"],
         "sourceMap": true,
         "outDir": "dist",

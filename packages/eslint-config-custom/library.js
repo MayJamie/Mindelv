@@ -17,7 +17,6 @@ module.exports = {
     extends: [
         '@vercel/style-guide/eslint/node',
         '@vercel/style-guide/eslint/typescript',
-        'prettier',
         './base.js',
     ].map(require.resolve),
     parserOptions: {

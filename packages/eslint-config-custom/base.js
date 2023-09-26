@@ -37,9 +37,10 @@ module.exports = {
     },
     overrides: [
         {
-            files: ['**/*.tsx'],
+            files: ['*.tsx'],
             rules: {
                 'arrow-body-style': 'off',
+                '@typescript-eslint/explicit-function-return-type': 'off',
             },
         },
     ],
