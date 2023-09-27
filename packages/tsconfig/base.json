@@ -26,8 +26,7 @@
         "incremental": true,
         "typeRoots": ["node_modules/@types", "./src/types/*"],
         "sourceMap": true,
-        "outDir": "dist",
-        "baseUrl": "."
+        "outDir": "dist"
     },
     "exclude": ["node_modules"]
 }
