@@ -1,7 +1,5 @@
 /** @format */
 
-import Image from 'next/image';
-import type { ComponentPropsWithRef } from 'react';
 import { HEIGHT_HEADER } from 'shared-lib/constants/styles';
 import {
     AppBar,
@@ -15,27 +13,27 @@ import {
 } from '..';
 import { MenuIcon } from '../icons';
 import { AppLink } from '../ui';
+import LogoLink from '../ui/LogoLink';
 import BodyContainer from './BodyContainer';
+import type { IHeaderProps, TAppLink } from './layout.types';
 
-type TAppLink = ComponentPropsWithRef<typeof AppLink>;
-interface IHeaderProps {
-    isTransparent?: boolean;
-    links: TAppLink[];
-}
 type TLinkProps = Pick<IHeaderProps, 'links'>;
 
 const HeaderLink = ({ children, href, ...other }: TAppLink) => {
     return (
-        <Typography
-            component={ListItem}
-            sx={{
-                '&:hover, &:focus': {
-                    fontWeight: 800,
-                    transition: 'all 0.3s ease-in-out',
-                },
-            }}
-        >
-            <AppLink href={href} {...other}>
+        <Typography component={ListItem}>
+            <AppLink
+                href={href}
+                sx={{
+                    textDecoration: 'none',
+                    color: (theme) => theme.palette.text.secondary,
+                    '&:hover, &:focus': {
+                        transition: 'all 0.3s ease-in-out',
+                        textDecoration: 'underline',
+                    },
+                }}
+                {...other}
+            >
                 {children}
             </AppLink>
         </Typography>
@@ -50,12 +48,7 @@ const HeaderLinks = ({ links = [] }: TLinkProps) => {
                 const key = typeof href === 'string' ? href : href.pathname;
 
                 return (
-                    <HeaderLink
-                        href={href}
-                        key={key}
-                        sx={{ color: 'white' }}
-                        {...restProps}
-                    >
+                    <HeaderLink href={href} key={key} {...restProps}>
                         {children}
                     </HeaderLink>
                 );
@@ -119,13 +112,13 @@ const MobileNav = ({ links }: TLinkProps) => {
     );
 };
 
-const DefaultHeader = ({ isTransparent, links }: IHeaderProps) => {
+const DefaultHeader = ({ isTransparentAtTop, links }: IHeaderProps) => {
     return (
         <AppBar
             position='fixed'
             sx={{
                 transition: 'all 0.3s ease-in-out',
-                backgroundColor: isTransparent ? 'none' : 'initial',
+                backgroundColor: isTransparentAtTop ? 'red' : 'blue',
                 height: HEIGHT_HEADER,
             }}
         >
@@ -136,20 +129,7 @@ const DefaultHeader = ({ isTransparent, links }: IHeaderProps) => {
                     sx={{ px: { xs: 0 }, justifyContent: 'flex-start' }}
                 >
                     <div>
-                        <AppLink
-                            href='/'
-                            sx={{
-                                display: 'block',
-                                position: 'relative',
-                            }}
-                        >
-                            <Image
-                                alt='logo'
-                                objectFit='contain'
-                                objectPosition='center'
-                                src=''
-                            />
-                        </AppLink>
+                        <LogoLink height={48} width={48} />
                     </div>
                     <Nav links={links} />
                     <MobileNav links={links} />

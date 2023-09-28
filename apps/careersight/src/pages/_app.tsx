@@ -1,37 +1,11 @@
 /** @format */
 
 import type { AppProps } from 'next/app';
-import { context, layout } from 'shared-client';
-import type { TPropsWithChildrenDefault } from 'shared-types';
+import { context } from 'shared-client';
+import AppLayout from '../client/components/layout/AppLayout';
+import '../styles/globals.css';
 
 const { AppRootProvider } = context;
-const { DefaultHeader, DefaultFooter, DefaultLayout } = layout;
-
-const links = [
-    { href: '/', children: 'Home' },
-    { href: '/about', children: 'About' },
-    { href: '/careersight', children: 'Careersight' },
-];
-
-const AppHeader = (props) => {
-    return <DefaultHeader links={links} {...props} />;
-};
-
-const AppFooter = () => {
-    return <DefaultFooter links={links} />;
-};
-
-const AppLayout = ({ children }: TPropsWithChildrenDefault) => {
-    return (
-        <DefaultLayout
-            FooterComponent={AppFooter}
-            HeaderComponent={AppHeader}
-            hasTransparentHeader
-        >
-            {children}
-        </DefaultLayout>
-    );
-};
 
 /* eslint-disable no-console -- log initiation of app */
 console.log('Careersight app loaded!');

@@ -26,7 +26,8 @@ import SvgIcon from '@mui/material/SvgIcon';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Zoom from '@mui/material/Zoom';
-import { styled, useTheme } from '@mui/material/styles';
+import { common, deepOrange, grey, red } from '@mui/material/colors';
+import { ThemeProvider, createTheme, styled, useTheme } from '@mui/material/styles';
 
 export {
     AppBar,
@@ -51,11 +52,16 @@ export {
     MenuItem,
     Stack,
     SvgIcon,
+    ThemeProvider,
     Toolbar,
     Typography,
     Zoom,
+    common,
+    createTheme,
+    deepOrange,
+    grey,
+    red,
     styled,
     useTheme,
+    type LinkProps,
 };
-
-export type { LinkProps };

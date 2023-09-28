@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "license": "MIT",
     "main": "./index.ts",
-    "types": "./index.types.ts",
+    "types": "./index.ts",
     "scripts": {
         "generate:component": "turbo gen react-component",
         "lint": "eslint .",
