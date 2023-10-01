@@ -1,8 +1,10 @@
 /** @format */
 
-import { HEIGHT_HEADER } from 'shared-lib/constants/styles';
+import { useEffect, useState } from 'react';
+import { CONSTANT } from 'shared-lib';
 import {
     AppBar,
+    Box,
     IconButton,
     ListItem,
     Menu,
@@ -11,11 +13,14 @@ import {
     Toolbar,
     Typography,
 } from '..';
+import useScrollTrigger from '../../hooks/useScrollTrigger';
 import { MenuIcon } from '../icons';
 import { AppLink } from '../ui';
 import LogoLink from '../ui/LogoLink';
 import BodyContainer from './BodyContainer';
 import type { IHeaderProps, TAppLink } from './layout.types';
+
+const { STYLE_HEIGHT_HEADER } = CONSTANT;
 
 type TLinkProps = Pick<IHeaderProps, 'links'>;
 
@@ -26,9 +31,8 @@ const HeaderLink = ({ children, href, ...other }: TAppLink) => {
                 href={href}
                 sx={{
                     textDecoration: 'none',
-                    color: (theme) => theme.palette.text.secondary,
+                    color: 'inherit',
                     '&:hover, &:focus': {
-                        transition: 'all 0.3s ease-in-out',
                         textDecoration: 'underline',
                     },
                 }}
@@ -104,7 +108,11 @@ const MobileNav = ({ links }: TLinkProps) => {
                     horizontal: 'left',
                 }}
             >
-                <MenuItem onClick={() => null} sx={{ flexDirection: 'column' }}>
+                <MenuItem
+                    component='ul'
+                    onClick={() => null}
+                    sx={{ flexDirection: 'column' }}
+                >
                     <HeaderLinks links={links} />
                 </MenuItem>
             </Menu>
@@ -113,24 +121,55 @@ const MobileNav = ({ links }: TLinkProps) => {
 };
 
 const DefaultHeader = ({ isTransparentAtTop, links }: IHeaderProps) => {
+    const trigger = useScrollTrigger();
+    const [headerBgColor, setHeaderBgColor] = useState('');
+    const [headerBoxShadow, setHeaderBoxShadow] = useState('');
+    const [linkColor, setLinkColor] = useState('');
+
+    useEffect(() => {
+        if (trigger) {
+            setHeaderBgColor('background.default');
+            setHeaderBoxShadow(
+                '0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)',
+            );
+            setLinkColor('black.main');
+        } else if (isTransparentAtTop) {
+            setHeaderBgColor('transparent');
+            setHeaderBoxShadow('none');
+            setLinkColor('white.main');
+        } else {
+            setHeaderBgColor('background.default');
+            setHeaderBoxShadow('none');
+            setLinkColor('black.main');
+        }
+    }, [trigger, isTransparentAtTop]);
+
     return (
         <AppBar
             position='fixed'
             sx={{
-                transition: 'all 0.3s ease-in-out',
-                backgroundColor: isTransparentAtTop ? 'red' : 'blue',
-                height: HEIGHT_HEADER,
+                transition: 'none',
+                height: STYLE_HEIGHT_HEADER,
+                backgroundColor: headerBgColor,
+                boxShadow: headerBoxShadow,
+                color: linkColor,
             }}
         >
             <BodyContainer>
                 <Toolbar
                     component='nav'
                     disableGutters
-                    sx={{ px: { xs: 0 }, justifyContent: 'flex-start' }}
+                    sx={{ px: { xs: 0 }, justifyContent: 'flex-start', color: 'inherit' }}
                 >
-                    <div>
-                        <LogoLink height={48} width={48} />
-                    </div>
+                    <Box
+                        sx={{
+                            ...(isTransparentAtTop && !trigger
+                                ? {}
+                                : { filter: 'invert(1)' }),
+                        }}
+                    >
+                        <LogoLink imageProps={{ src: '/images/logos/logo-white.png' }} />
+                    </Box>
                     <Nav links={links} />
                     <MobileNav links={links} />
                 </Toolbar>

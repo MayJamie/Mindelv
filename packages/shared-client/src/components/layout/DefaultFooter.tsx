@@ -55,7 +55,11 @@ const FooterLinks = ({ links = [] }: TLinkProps) => {
 
 const StackList = ({ children }: TPropsWithChildrenDefault) => {
     return (
-        <Stack component='ul' direction='column' sx={{ flexItems: 'center' }}>
+        <Stack
+            component='ul'
+            direction='column'
+            sx={{ flexItems: 'center', width: 'max-content', mx: 'auto' }}
+        >
             {children}
         </Stack>
     );
@@ -97,7 +101,7 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                 <BodyContainer>
                     <Box sx={{ paddingLeft: { md: 8 } }}>
                         <Typography
-                            color='common.white'
+                            color='white.main'
                             gutterBottom
                             sx={{ maxWidth: 'clamp(5ch, 100%, 20ch)', fontSize: '4rem' }}
                             variant='h2'
@@ -105,7 +109,7 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                             Ready to get started?
                         </Typography>
                         <Typography
-                            color='common.white'
+                            color='white.main'
                             gutterBottom
                             sx={{ maxWidth: 'clamp(10ch, 100%, 60ch)' }}
                             variant='subtitle1'
@@ -151,7 +155,14 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                     <Divider light variant='fullWidth' />
                     <Grid
                         container
-                        sx={{ py: 3, textAlign: 'center', justifyContent: 'center' }}
+                        sx={{
+                            py: 3,
+                            textAlign: 'center',
+                            justifyContent: 'center',
+                            width: 'max-content',
+                            mx: 'auto',
+                            gap: '32px',
+                        }}
                     >
                         <Grid
                             item

@@ -2,9 +2,14 @@
 
 import type { ImageProps as NextImageProps } from 'next/image';
 import NextImage from 'next/image';
+import type { ComponentProps } from 'react';
 import { useEffect, useState } from 'react';
+import { styled } from '..';
 
-type TProps = NextImageProps & { fallbackSrc?: NextImageProps['src'] };
+const StyledNextImage = styled(NextImage)({});
+
+type TProps = { fallbackSrc?: NextImageProps['src'] } & NextImageProps &
+    ComponentProps<typeof StyledNextImage>;
 
 const Image = (props: TProps) => {
     const { src, fallbackSrc, ...restProps } = props;
@@ -15,7 +20,7 @@ const Image = (props: TProps) => {
     }, [src]);
 
     return (
-        <NextImage
+        <StyledNextImage
             onError={() => {
                 fallbackSrc && setImgSrc(fallbackSrc);
             }}

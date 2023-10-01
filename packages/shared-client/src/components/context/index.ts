@@ -1,5 +1,5 @@
 /** @format */
 
-import AppRootProvider from './AppRootProvider';
+import NextAppRootProvider from './NextAppRootProvider';
 
-export { AppRootProvider };
+export { NextAppRootProvider };

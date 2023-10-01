@@ -1,6 +1,8 @@
 /** @format */
 
+import type { PaletteOptions } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
+import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -21,16 +23,31 @@ import ListItem from '@mui/material/ListItem';
 import ListSubheader from '@mui/material/ListSubheader';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import SvgIcon from '@mui/material/SvgIcon';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
+import TextField from '@mui/material/TextField';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Zoom from '@mui/material/Zoom';
-import { common, deepOrange, grey, red } from '@mui/material/colors';
+import {
+    blue,
+    common,
+    deepOrange,
+    green,
+    grey,
+    orange,
+    purple,
+    red,
+} from '@mui/material/colors';
+import type { SxProps } from '@mui/material/styles';
 import { ThemeProvider, createTheme, styled, useTheme } from '@mui/material/styles';
 
 export {
     AppBar,
+    Autocomplete,
     Box,
     Button,
     ButtonGroup,
@@ -50,18 +67,28 @@ export {
     ListSubheader,
     Menu,
     MenuItem,
+    Rating,
     Stack,
     SvgIcon,
+    Tab,
+    Tabs,
+    TextField,
     ThemeProvider,
     Toolbar,
     Typography,
     Zoom,
+    blue,
     common,
     createTheme,
     deepOrange,
+    green,
     grey,
+    orange,
+    purple,
     red,
     styled,
     useTheme,
     type LinkProps,
+    type PaletteOptions,
+    type SxProps,
 };

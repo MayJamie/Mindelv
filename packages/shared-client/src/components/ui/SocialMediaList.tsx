@@ -1,7 +1,7 @@
 /** @format */
 
 import { List, Stack } from '..';
-import { FacebookIcon, LinkedInIcon } from '../icons';
+import { CustomLinkedInIcon, FacebookIcon } from '../icons';
 import AppLink from './AppLink';
 
 const SocialMediaList = () => {
@@ -11,7 +11,7 @@ const SocialMediaList = () => {
                 <AppLink
                     href='https://www.facebook.com/ideffect?mibextid=ZbWKwL'
                     rel='noreferrer'
-                    style={{ color: 'black' }}
+                    style={{ color: 'black.main' }}
                 >
                     <FacebookIcon color='inherit' fontSize='large' />
                 </AppLink>
@@ -20,10 +20,10 @@ const SocialMediaList = () => {
                 <AppLink
                     href='https://www.linkedin.com/company/ideffect/'
                     rel='noreferrer'
-                    style={{ color: 'black' }}
+                    style={{ color: 'black.main' }}
                     target='_blank'
                 >
-                    <LinkedInIcon color='inherit' fontSize='large' />
+                    <CustomLinkedInIcon color='inherit' fontSize='large' />
                 </AppLink>
             </li>
         </List>

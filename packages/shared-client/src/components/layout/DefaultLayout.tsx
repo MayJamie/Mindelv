@@ -1,11 +1,13 @@
 /** @format */
 
 import type { ElementType } from 'react';
-import { HEIGHT_HEADER } from 'shared-lib/constants/styles';
+import { CONSTANT } from 'shared-lib';
 import type { TPropsWithChildrenDefault } from 'shared-types';
 import { Box } from '..';
 import ScrollTopButton from './ScrollTopButton';
 import type { IHeaderProps } from './layout.types';
+
+const { STYLE_HEIGHT_HEADER } = CONSTANT;
 
 interface IProps {
     HeaderComponent: ElementType;
@@ -26,7 +28,7 @@ const DefaultLayout = ({
             <Box
                 component='main'
                 sx={{
-                    mt: HEIGHT_HEADER,
+                    mt: STYLE_HEIGHT_HEADER,
                 }}
             >
                 {children}

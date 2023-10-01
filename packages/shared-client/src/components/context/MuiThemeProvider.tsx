@@ -1,14 +1,17 @@
 /** @format */
 
 import { useMemo } from 'react';
+import { CONSTANT } from 'shared-lib';
 import type { TPropsWithChildrenDefault } from 'shared-types';
+import type { PaletteOptions } from '..';
 import { ThemeProvider, common, createTheme, deepOrange, grey, red } from '..';
+
+const { CLASS_SECTION_ANIMATED_BG } = CONSTANT;
 
 interface IProps {
     resolvedTheme: 'light' | 'dark';
 }
 
-const sectionAnimatedBg = 'section__animated-bg';
 const customBlue = '#344B9C';
 const customRed = '#B42B44';
 const customWhite = common.white;
@@ -22,7 +25,7 @@ const backgroundSvg = `
     background-attachment: fixed;
     background-size: cover;`;
 
-const paletteLight = {
+const paletteLight: PaletteOptions = {
     primary: {
         main: customBlue,
     },
@@ -47,8 +50,9 @@ const paletteLight = {
         primary: grey[900],
         secondary: common.white,
     },
-};
-const paletteDark = {
+} as const;
+
+const paletteDark: PaletteOptions = {
     primary: {
         main: customBlue,
     },
@@ -73,7 +77,7 @@ const paletteDark = {
         primary: common.white,
         secondary: grey[500],
     },
-};
+} as const;
 
 const MuiThemeProvider = ({
     children,
@@ -113,7 +117,7 @@ const MuiThemeProvider = ({
                 components: {
                     MuiCssBaseline: {
                         styleOverrides: `
-                            .${sectionAnimatedBg} {
+                            .${CLASS_SECTION_ANIMATED_BG} {
                               ${backgroundSvg}
                             }
                         `,
@@ -123,7 +127,7 @@ const MuiThemeProvider = ({
                     mode: resolvedTheme,
                     ...(resolvedTheme === 'light' ? paletteLight : paletteDark),
                 },
-            }),
+            } as const),
         [resolvedTheme],
     );
 
