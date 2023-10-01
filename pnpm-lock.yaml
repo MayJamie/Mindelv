@@ -178,6 +178,9 @@ importers:
       next-themes:
         specifier: ^0.2.1
         version: 0.2.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       react-error-boundary:
         specifier: ^4.0.11
         version: 4.0.11(react@18.2.0)
@@ -203,9 +206,6 @@ importers:
       eslint-config-custom:
         specifier: workspace:*
         version: link:../eslint-config-custom
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
       tsconfig:
         specifier: workspace:*
         version: link:../tsconfig
