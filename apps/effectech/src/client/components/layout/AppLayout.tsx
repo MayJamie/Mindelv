@@ -7,8 +7,8 @@ import type { TPropsWithChildrenDefault } from 'shared-types';
 const { DefaultHeader, DefaultFooter, DefaultLayout } = layout;
 
 const links = [
-    { href: '/', children: 'Upcoming Events' },
-    { href: '/events', children: 'Past Events' },
+    { href: '/', children: 'Home' },
+    { href: '/events', children: 'Events' },
 ];
 
 type TAppHeader = ComponentProps<typeof DefaultHeader>;

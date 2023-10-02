@@ -46,7 +46,11 @@ const ScrollTop = (props: TPropsWithChildrenDefault) => {
 const ScrollTopButton = () => {
     return (
         <ScrollTop>
-            <Fab aria-label='scroll back to top' size='small'>
+            <Fab
+                aria-label='scroll back to top'
+                size='small'
+                sx={{ color: 'white.main', backgroundColor: 'primary.main' }}
+            >
                 <IconKeyboardArrowUpIcon />
             </Fab>
         </ScrollTop>

@@ -9,7 +9,7 @@ import '../styles/globals.css';
 const { NextAppRootProvider } = context;
 
 /* eslint-disable no-console -- log initiation of app */
-console.log('Careersight app loaded!');
+console.log('Effectech app loaded!');
 
 export default function App({ Component, pageProps, ...rest }: AppProps) {
     return (

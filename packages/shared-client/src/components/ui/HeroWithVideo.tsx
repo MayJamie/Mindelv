@@ -1,11 +1,19 @@
 /** @format */
 
 import { CONSTANT } from 'shared-lib';
+import type { SxProps } from '..';
 import { Box, Container, Typography } from '..';
 
 const { STYLE_HEIGHT_HEADER } = CONSTANT;
 
-const HeroWithVideo = () => {
+interface IProps {
+    videoStyles?: SxProps;
+    title: string;
+    description: string;
+    boldText: string;
+}
+
+const HeroWithVideo = ({ videoStyles, title, description, boldText }: IProps) => {
     return (
         <Box
             component='section'
@@ -35,6 +43,7 @@ const HeroWithVideo = () => {
                     objectPosition: 'center center',
                     objectFit: 'cover',
                     filter: 'brightness(60%)',
+                    ...videoStyles,
                 }}
             >
                 <source src='/videos/intro.mp4' type='video/mp4' />
@@ -54,7 +63,7 @@ const HeroWithVideo = () => {
                         }}
                         variant='h1'
                     >
-                        YOUR CAREER DEVELOPMENT PARTNER
+                        {title}
                     </Typography>
                     <Typography
                         color='white.main'
@@ -62,9 +71,7 @@ const HeroWithVideo = () => {
                         maxWidth='clamp(10ch, 100%, 60ch)'
                         variant='body1'
                     >
-                        <strong>I&apos;d Effect Edulabs</strong> is an online learning and
-                        development environment, focused on assisting users to achieve
-                        their academic and career goals.
+                        <strong>{boldText}</strong> {description}
                     </Typography>
                 </Box>
             </Container>
