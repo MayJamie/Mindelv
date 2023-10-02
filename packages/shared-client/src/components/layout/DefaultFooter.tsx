@@ -58,7 +58,7 @@ const StackList = ({ children }: TPropsWithChildrenDefault) => {
         <Stack
             component='ul'
             direction='column'
-            sx={{ flexItems: 'center', width: 'max-content', mx: 'auto' }}
+            sx={{ flexItems: 'center', width: 'max-content', mx: { xs: 0, md: 'auto' } }}
         >
             {children}
         </Stack>
@@ -125,7 +125,11 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                     <Grid
                         container
                         spacing={0}
-                        sx={{ py: 3, justifyContent: 'center', justifyItems: 'center' }}
+                        sx={{
+                            py: 3,
+                            justifyContent: 'center',
+                            justifyItems: 'center',
+                        }}
                     >
                         {footerLinkGroup.map((footerLinkItem, index) => {
                             const { heading, links: footerLinks } = footerLinkItem;
@@ -167,16 +171,15 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                     >
                         <Grid
                             item
-                            sm={4}
                             sx={{
                                 height: 'max-content',
                             }}
-                            xs={12}
+                            xs={4}
                         >
                             <LogoLink />
                         </Grid>
                         <Divider flexItem light orientation='vertical' />
-                        <Grid item sm={4} xs={12}>
+                        <Grid item xs={4}>
                             <SocialMediaList />
                         </Grid>
                     </Grid>

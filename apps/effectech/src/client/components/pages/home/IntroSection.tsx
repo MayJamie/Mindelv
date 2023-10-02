@@ -11,7 +11,7 @@ const IntroSection = () => {
             description={
                 'is an online hub ' +
                 'focused on teaching ' +
-                'through our events and webinars.'
+                'through our online conferences and webinars.'
             }
             title="WELCOME TO THE I'DEFFECT EVENTS PAGE"
             videoStyles={{ objectPosition: 'center 32%' }}
