@@ -307,7 +307,12 @@ const UpcomingEventsSection = () => {
         <Box component='section'>
             <Container maxWidth='xl' sx={{ mx: 'auto' }}>
                 <Typography
-                    sx={{ py: '50px', maxWidth: '30ch', mx: 'auto', textAlign: 'center' }}
+                    sx={{
+                        py: '50px',
+                        maxWidth: '30ch',
+                        mx: 'auto',
+                        textAlign: { xs: 'left', sm: 'center' },
+                    }}
                     variant='h2'
                 >
                     Welcome to our Effectech 2023 Conference Page
