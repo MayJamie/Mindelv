@@ -7,6 +7,7 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import FactCheckIcon from '@mui/icons-material/FactCheck';
 import InsightsIcon from '@mui/icons-material/Insights';
 import IconKeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import LaunchIcon from '@mui/icons-material/Launch';
 import MenuIcon from '@mui/icons-material/Menu';
 import PeopleIcon from '@mui/icons-material/People';
 import SchoolIcon from '@mui/icons-material/School';
@@ -31,6 +32,7 @@ export {
     FactCheckIcon,
     IconKeyboardArrowUpIcon,
     InsightsIcon,
+    LaunchIcon,
     MenuIcon,
     PeopleIcon,
     SchoolIcon,

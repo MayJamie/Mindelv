@@ -1,7 +1,7 @@
 /** @format */
 
 import imgEventFlyer1 from 'public/images/events/27-Oct-2023/ai_friend_of_foe_1.jpg';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { components, ui } from 'shared-client';
 import { CONSTANT } from 'shared-lib';
 import RegisterButton from '../../ui/RegisterButton';
@@ -71,7 +71,11 @@ const EventsSection = () => {
                 <Grid
                     container
                     spacing={4}
-                    sx={{ justifyContent: 'center', alignItems: 'flex-start' }}
+                    sx={{
+                        justifyContent: 'center',
+                        alignItems: 'flex-start',
+                        mt: '50px',
+                    }}
                 >
                     <Grid item md={6} sx={{ position: 'relative' }} xs={12}>
                         <Image
@@ -98,9 +102,9 @@ const EventsSection = () => {
                     </Grid>
                 </Grid>
                 <Box sx={{ pt: '50px', mx: 'auto', width: 'max-content' }}>
-                    {statements.map((statement) => {
+                    {statements.map((statement, index) => {
                         return (
-                            <Box key={statement.heading} sx={{ pb: '32px' }}>
+                            <Box key={index} sx={{ pb: '32px' }}>
                                 <Typography gutterBottom variant='h3'>
                                     {statement.heading}
                                 </Typography>

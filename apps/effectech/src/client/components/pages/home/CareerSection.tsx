@@ -8,7 +8,7 @@ const { AppLink } = ui;
 const { LaunchIcon } = icons;
 const { CLASS_SECTION_ANIMATED_BG } = CONSTANT;
 
-const EventsSection = () => {
+const CareerSection = () => {
     return (
         <Box className={CLASS_SECTION_ANIMATED_BG} component='section'>
             <Container maxWidth='xl'>
@@ -17,28 +17,27 @@ const EventsSection = () => {
                     spacing={4}
                     sx={{
                         justifyContent: 'center',
-                        paddingTop: 6,
                         alignItems: 'flex-start',
                     }}
                 >
                     <Grid item md={4} sx={{ textAlign: 'center' }} xs={12}>
                         <Typography gutterBottom variant='h2'>
-                            Upcoming Events
+                            Career Advice
                         </Typography>
                         <Typography gutterBottom variant='body1'>
                             Visit our{' '}
-                            <AppLink href='https://effectechconference.vercel.app/'>
-                                Effectech Conference website
+                            <AppLink href='https://careersight.vercel.app/'>
+                                Careersight website
                             </AppLink>{' '}
-                            for more details on what&apos;s next!
+                            for more details!
                         </Typography>
                         <Button
-                            href='https://effectechconference.vercel.app/'
+                            href='https://careersight.vercel.app/'
                             startIcon={<LaunchIcon fontSize='inherit' />}
                             sx={{ mt: '16px' }}
                             variant='contained'
                         >
-                            View Events
+                            Visit Careersight
                         </Button>
                     </Grid>
                 </Grid>
@@ -47,4 +46,4 @@ const EventsSection = () => {
     );
 };
 
-export default EventsSection;
+export default CareerSection;

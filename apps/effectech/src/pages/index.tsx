@@ -4,6 +4,7 @@ import Head from 'next/head';
 import type { ReactElement } from 'react';
 import type { TNextPageWithLayout } from 'shared-client/src/components/context/NextAppRootProvider';
 import AppLayout from '../client/components/layout/AppLayout';
+import CareerSection from '../client/components/pages/home/CareerSection';
 import EventsSection from '../client/components/pages/home/EventsSection';
 import IntroSection from '../client/components/pages/home/IntroSection';
 
@@ -19,6 +20,7 @@ const HomePage: TNextPageWithLayout = () => {
             </Head>
             <IntroSection />
             <EventsSection />
+            <CareerSection />
         </>
     );
 };
