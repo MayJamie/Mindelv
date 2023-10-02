@@ -24,7 +24,7 @@
         "resolveJsonModule": true,
         "jsx": "preserve",
         "incremental": true,
-        "typeRoots": ["node_modules/@types", "./src/types/*"],
+        "typeRoots": ["node_modules/@types", "src/types/*"],
         "sourceMap": true,
         "outDir": "dist"
     },

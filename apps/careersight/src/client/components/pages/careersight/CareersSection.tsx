@@ -11,7 +11,7 @@ import {
     professionalServicesJobData,
     securityJobData,
     softwareAndApplicationsJobData,
-} from '../../data';
+} from '../../../data';
 
 const { Box, Container, Typography, Autocomplete, TextField, Tabs, Tab } = components;
 

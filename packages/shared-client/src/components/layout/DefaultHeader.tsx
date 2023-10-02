@@ -32,6 +32,7 @@ const HeaderLink = ({ children, href, ...other }: TAppLink) => {
                 sx={{
                     textDecoration: 'none',
                     color: 'inherit',
+                    whiteSpace: 'nowrap',
                     '&:hover, &:focus': {
                         textDecoration: 'underline',
                     },

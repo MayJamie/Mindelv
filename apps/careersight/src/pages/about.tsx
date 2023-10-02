@@ -2,8 +2,8 @@
 
 import Head from 'next/head';
 import type { TNextPageWithLayout } from 'shared-client/src/components/context/NextAppRootProvider';
-import IntroSection from '../client/pages/about/IntroSection';
-import TeamSection from '../client/pages/about/TeamSection';
+import IntroSection from '../client/components/pages/about/IntroSection';
+import TeamSection from '../client/components/pages/about/TeamSection';
 
 const AboutPage: TNextPageWithLayout = () => {
     return (

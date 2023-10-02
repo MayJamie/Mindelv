@@ -4,27 +4,19 @@ import Head from 'next/head';
 import type { ReactElement } from 'react';
 import type { TNextPageWithLayout } from 'shared-client/src/components/context/NextAppRootProvider';
 import AppLayout from '../client/components/layout/AppLayout';
-import DiscoverSection from '../client/components/pages/home/DiscoverSection';
-import EventsSection from '../client/components/pages/home/EventsSection';
 import IntroSection from '../client/components/pages/home/IntroSection';
-import MarqueeSection from '../client/components/pages/home/MarqueeSection';
-import TargetUsersSection from '../client/components/pages/home/TargetUsersSection';
 
 const HomePage: TNextPageWithLayout = () => {
     return (
         <>
             <Head>
-                <title>Careersight | I&apos;d Effect | Home Page</title>
+                <title>Effectech | I&apos;d Effect | Home Page</title>
                 <meta
-                    content='Find out more about our E-Learning and career advice services'
+                    content='Find out more about our upcoming E-Learning and career advice events and webinars'
                     name='description'
                 />
             </Head>
             <IntroSection />
-            <MarqueeSection />
-            <DiscoverSection />
-            <TargetUsersSection />
-            <EventsSection />
         </>
     );
 };

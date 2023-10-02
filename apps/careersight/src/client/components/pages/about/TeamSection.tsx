@@ -213,7 +213,10 @@ const TeamSection = () => {
                                                     <Box
                                                         component='span'
                                                         key={qualification}
-                                                        sx={{ py: 0.25 }}
+                                                        sx={{
+                                                            py: 0.25,
+                                                            display: 'block',
+                                                        }}
                                                     >
                                                         {qualification}
                                                     </Box>

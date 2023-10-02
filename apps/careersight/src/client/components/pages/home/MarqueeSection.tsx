@@ -2,7 +2,7 @@
 
 import { components } from 'shared-client';
 import { CONSTANT } from 'shared-lib';
-import MarqueeInfo from '../../components/MarqueeInfo';
+import MarqueeInfo from '../../MarqueeInfo';
 
 const { CLASS_SECTION_ANIMATED_BG } = CONSTANT;
 const { Box, Container, Divider } = components;

@@ -3,8 +3,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import type { TNextPageWithLayout } from 'shared-client/src/components/context/NextAppRootProvider';
-import JobRoleInfoSection from '../../client/pages/careersight/JobRoleInfoSection';
-import JobRoleIntroSection from '../../client/pages/careersight/JobRoleIntroSection';
+import JobRoleInfoSection from '../../client/components/pages/careersight/JobRoleInfoSection';
+import JobRoleIntroSection from '../../client/components/pages/careersight/JobRoleIntroSection';
 
 const CareersightJobRolePage: TNextPageWithLayout = () => {
     const router = useRouter();

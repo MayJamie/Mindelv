@@ -5,7 +5,7 @@ import type { Dispatch, SetStateAction } from 'react';
 import { useState } from 'react';
 import { components, icons } from 'shared-client';
 import { AppLink } from 'shared-client/src/components/ui';
-import { allJobData } from '../../data';
+import { allJobData } from '../../../data';
 import type { TJobDataProps } from './CareersSection';
 
 const { Box, Container, Typography, Button, ButtonGroup, Rating } = components;

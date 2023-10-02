@@ -2,8 +2,8 @@
 
 import Head from 'next/head';
 import type { TNextPageWithLayout } from 'shared-client/src/components/context/NextAppRootProvider';
-import CareersSection from '../../client/pages/careersight/CareersSection';
-import IntroSection from '../../client/pages/careersight/IntroSection';
+import CareersSection from '../../client/components/pages/careersight/CareersSection';
+import IntroSection from '../../client/components/pages/careersight/IntroSection';
 
 const CareersightPage: TNextPageWithLayout = () => {
     return (
