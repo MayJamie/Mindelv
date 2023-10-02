@@ -1,13 +1,11 @@
 /** @format */
 
-import type { ComponentProps } from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 import { components, ui } from 'shared-client';
-import type { SxProps } from 'shared-client/src/components';
 import RegisterButton from '../ui/RegisterButton';
 
 const {
     Grid,
-    Box,
     Timeline,
     TimelineItem,
     TimelineSeparator,
@@ -27,8 +25,7 @@ interface IEventItemProps {
     endTime?: string | Date;
     info: string;
     panelists: {
-        name: string;
-        link?: string;
+        name: string | ReactNode;
     }[];
 }
 interface IEventItemsProps {
@@ -40,7 +37,7 @@ interface IEventItemsProps {
 
 const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => {
     return (
-        <Box component='section'>
+        <div>
             <Container maxWidth='lg'>
                 <Timeline
                     sx={{
@@ -64,7 +61,7 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                         return (
                             <TimelineItem key={item.startTime.toString()}>
                                 <TimelineOppositeContent sx={{ color: 'black.main' }}>
-                                    <Typography>
+                                    <Typography sx={{ fontWeight: 700 }}>
                                         <>
                                             {item.startTime} to {item.endTime}
                                         </>
@@ -77,27 +74,9 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                                 <TimelineContent sx={{ color: 'black.main' }}>
                                     <Typography>{item.info} </Typography>
                                     <List>
-                                        {item.panelists.map((panelist) => {
-                                            const style: SxProps = {
-                                                listStyle: 'circle',
-                                            };
-                                            if (panelist.link) {
-                                                return (
-                                                    <ListItem
-                                                        key={panelist.name}
-                                                        sx={{ ...style }}
-                                                    >
-                                                        <AppLink href={panelist.link}>
-                                                            {panelist.name}
-                                                        </AppLink>
-                                                    </ListItem>
-                                                );
-                                            }
+                                        {item.panelists.map((panelist, index) => {
                                             return (
-                                                <ListItem
-                                                    key={panelist.name}
-                                                    sx={{ ...style }}
-                                                >
+                                                <ListItem key={index}>
                                                     <Typography>
                                                         {panelist.name}
                                                     </Typography>
@@ -109,34 +88,38 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                             </TimelineItem>
                         );
                     })}
-                    <RegisterButton link={registrationLink} />
+                    <RegisterButton href={registrationLink} />
                 </Timeline>
-                <Grid
-                    container
-                    spacing={8}
-                    sx={{ justifyContent: 'center', alignItems: 'flex-start' }}
-                >
-                    {images.map((img, index) => {
-                        return (
-                            <Grid item key={index}>
-                                <Image
-                                    alt='Event image'
-                                    src={img}
-                                    sx={{
-                                        borderRadius: '16px',
-                                        width: 'min(900px, 90%)',
-                                        height: 'auto',
-                                        display: 'block',
-                                        mx: 'auto',
-                                    }}
-                                />
-                            </Grid>
-                        );
-                    })}
-                </Grid>
-                <RegisterButton link={registrationLink} />
+                {Boolean(images.length) && (
+                    <>
+                        <Grid
+                            container
+                            spacing={8}
+                            sx={{ justifyContent: 'center', alignItems: 'flex-start' }}
+                        >
+                            {images.map((img, index) => {
+                                return (
+                                    <Grid item key={index}>
+                                        <Image
+                                            alt='Event image'
+                                            src={img}
+                                            sx={{
+                                                borderRadius: '16px',
+                                                width: 'min(900px, 90%)',
+                                                height: 'auto',
+                                                display: 'block',
+                                                mx: 'auto',
+                                            }}
+                                        />
+                                    </Grid>
+                                );
+                            })}
+                        </Grid>
+                        <RegisterButton href={registrationLink} />
+                    </>
+                )}
             </Container>
-        </Box>
+        </div>
     );
 };
 

@@ -14,7 +14,7 @@ const HomePage: TNextPageWithLayout = () => {
     return (
         <>
             <Head>
-                <title>Careersight | I&apos;d Effect | Home Page</title>
+                <title>Careersight | I&apos;deffect | Home Page</title>
                 <meta
                     content='Find out more about our E-Learning and career advice services'
                     name='description'

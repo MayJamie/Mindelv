@@ -59,7 +59,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext) => {
                             LayoutComponent={AppLayout}
                             description='Find out more about our E-Learning and Career Advisor services'
                             emotionCache={cache}
-                            title="Careersight | I'd Effect"
+                            title="Careersight | I'deffect"
                             {...props}
                         />
                     );

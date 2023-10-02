@@ -67,7 +67,7 @@ const StackList = ({ children }: TPropsWithChildrenDefault) => {
 
 const DefaultFooter = ({ links }: IFooterProps) => {
     const footerLinkGroup: { links: typeof links; heading: string }[] = [
-        { links, heading: "I'd Effect Edulabs" },
+        { links, heading: "I'deffect" },
         {
             links: [
                 {
@@ -100,7 +100,8 @@ const DefaultFooter = ({ links }: IFooterProps) => {
             >
                 <BodyContainer>
                     <Box sx={{ paddingLeft: { md: 8 } }}>
-                        <Typography
+                        {/* TODO: make this re-usable across both sites */}
+                        {/* <Typography
                             color='white.main'
                             gutterBottom
                             sx={{ maxWidth: 'clamp(5ch, 100%, 20ch)', fontSize: '4rem' }}
@@ -115,7 +116,7 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                             variant='subtitle1'
                         >
                             <strong>Edulabs beta</strong> coming soon!
-                        </Typography>
+                        </Typography> */}
                     </Box>
                 </BodyContainer>
             </Box>
@@ -180,7 +181,7 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                         </Grid>
                     </Grid>
                     <Typography sx={{ paddingBottom: 3, textAlign: 'center' }}>
-                        Copyright © 2022 I&apos;d Effect Limited. All rights reserved.
+                        Copyright © 2022 I&apos;deffect Limited. All rights reserved.
                     </Typography>
                 </BodyContainer>
             </Box>

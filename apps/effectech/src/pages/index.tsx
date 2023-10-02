@@ -12,7 +12,7 @@ const HomePage: TNextPageWithLayout = () => {
     return (
         <>
             <Head>
-                <title>Effectech | I&apos;d Effect | Home Page</title>
+                <title>Effectech | I&apos;deffect | Home Page</title>
                 <meta
                     content='Find out more about our E-Learning and career advice events and webinars'
                     name='description'

@@ -14,7 +14,7 @@ const CareersightJobRolePage: TNextPageWithLayout = () => {
     return (
         <>
             <Head>
-                <title>Careersight | I&apos;d Effect | {jobRoleString} Page</title>
+                <title>Careersight | I&apos;deffect | {jobRoleString} Page</title>
                 <meta
                     content={`See career information for ${jobRoleString}`}
                     name='description'

@@ -17,7 +17,7 @@ export default function App({ Component, pageProps, ...rest }: AppProps) {
             Component={Component}
             LayoutComponent={AppLayout}
             description='Find out more about our E-Learning and Career Advisor services'
-            title="Careersight | I'd Effect"
+            title="Careersight | I'deffect"
             {...rest}
             /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
              -- allow any for Next.js pageProps */

@@ -32,6 +32,7 @@ const CareerSection = () => {
                             for more details!
                         </Typography>
                         <Button
+                            LinkComponent={AppLink}
                             href='https://careersight.vercel.app/'
                             startIcon={<LaunchIcon fontSize='inherit' />}
                             sx={{ mt: '16px' }}

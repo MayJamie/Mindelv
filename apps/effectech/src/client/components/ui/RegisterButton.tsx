@@ -1,26 +1,18 @@
 /** @format */
 
 import type { ComponentProps } from 'react';
-import { components, ui } from 'shared-client';
+import { ui } from 'shared-client';
 
-const { Button } = components;
-const { AppLink } = ui;
+const { LinkButton } = ui;
 
-interface IProps extends ComponentProps<typeof Button> {
-    link: string;
-}
-
-const RegisterButton = ({ link, sx, ...restProps }: IProps) => {
+const RegisterButton = ({ sx, ...restProps }: ComponentProps<typeof LinkButton>) => {
     return (
-        <Button
-            LinkComponent={AppLink}
-            href={link}
-            variant='contained'
+        <LinkButton
             {...restProps}
             sx={{ mx: 'auto', my: '50px', display: 'flex', width: 'max-content', ...sx }}
         >
             Register Now
-        </Button>
+        </LinkButton>
     );
 };
 

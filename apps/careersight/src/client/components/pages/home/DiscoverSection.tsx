@@ -26,7 +26,7 @@ const DiscoverSection = () => {
                     </Grid>
                     <Grid item md={4} xs={12}>
                         <Typography gutterBottom variant='h2'>
-                            Discover I&apos;d Effect and our Edulabs{' '}
+                            Discover I&apos;deffect and our Edulabs{' '}
                             <span style={{ whiteSpace: 'nowrap' }}>E-Learning</span>{' '}
                             Platform
                         </Typography>

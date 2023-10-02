@@ -33,6 +33,7 @@ const EventsSection = () => {
                             for more details on what&apos;s next!
                         </Typography>
                         <Button
+                            LinkComponent={AppLink}
                             href='https://effectechconference.vercel.app/'
                             startIcon={<LaunchIcon fontSize='inherit' />}
                             sx={{ mt: '16px' }}

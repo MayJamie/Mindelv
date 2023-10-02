@@ -7,13 +7,13 @@ const { HeroWithVideo } = ui;
 const IntroSection = () => {
     return (
         <HeroWithVideo
-            boldText="I'd Effect Effectech"
+            boldText="I'deffect Effectech"
             description={
                 'is an online hub ' +
                 'focused on teaching ' +
                 'through our events and webinars.'
             }
-            title='YOUR CAREER DEVELOPMENT PARTNER'
+            title="WELCOME TO THE I'DEFFECT EVENTS PAGE"
             videoStyles={{ objectPosition: 'center 32%' }}
         />
     );

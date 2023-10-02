@@ -9,7 +9,7 @@ const CareersightPage: TNextPageWithLayout = () => {
     return (
         <>
             <Head>
-                <title>Careersight | I&apos;d Effect | Careersight Jobs Page</title>
+                <title>Careersight | I&apos;deffect | Careersight Jobs Page</title>
                 <meta content='See career information' name='description' />
             </Head>
             <IntroSection />

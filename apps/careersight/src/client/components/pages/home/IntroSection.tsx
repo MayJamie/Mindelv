@@ -7,7 +7,7 @@ const { HeroWithVideo } = ui;
 const IntroSection = () => {
     return (
         <HeroWithVideo
-            boldText="I'd Effect Careersight"
+            boldText="I'deffect Careersight"
             description={
                 'is an online learning and ' +
                 'development environment, focused on assisting users to achieve ' +

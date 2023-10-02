@@ -1,6 +1,6 @@
 /** @format */
 
-import { useEffect, useState } from 'react';
+import { MouseEvent, useEffect, useState } from 'react';
 import { CONSTANT } from 'shared-lib';
 import {
     AppBar,
@@ -22,7 +22,12 @@ import type { IHeaderProps, TAppLink } from './layout.types';
 
 const { STYLE_HEIGHT_HEADER } = CONSTANT;
 
-type TLinkProps = Pick<IHeaderProps, 'links'>;
+type TNavProps = Pick<IHeaderProps, 'links'>;
+type TMobileNavProps = TNavProps & {
+    anchorEl: HTMLElement | null;
+    handleOpenMenu: (_event: MouseEvent<HTMLElement>) => void;
+    handleCloseMenu: () => void;
+};
 
 const HeaderLink = ({ children, href, ...other }: TAppLink) => {
     return (
@@ -45,7 +50,7 @@ const HeaderLink = ({ children, href, ...other }: TAppLink) => {
     );
 };
 
-const HeaderLinks = ({ links = [] }: TLinkProps) => {
+const HeaderLinks = ({ links = [] }: TNavProps) => {
     return (
         <>
             {links.map((link) => {
@@ -62,7 +67,7 @@ const HeaderLinks = ({ links = [] }: TLinkProps) => {
     );
 };
 
-const Nav = ({ links }: TLinkProps) => {
+const Nav = ({ links }: TNavProps) => {
     return (
         <Toolbar disableGutters sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Stack component='ul' direction='row' sx={{ my: { md: 0 } }}>
@@ -72,7 +77,12 @@ const Nav = ({ links }: TLinkProps) => {
     );
 };
 
-const MobileNav = ({ links }: TLinkProps) => {
+const MobileNav = ({
+    links,
+    anchorEl,
+    handleOpenMenu,
+    handleCloseMenu,
+}: TMobileNavProps) => {
     const ID = 'menu-app-bar';
 
     return (
@@ -86,21 +96,21 @@ const MobileNav = ({ links }: TLinkProps) => {
                 aria-haspopup='true'
                 aria-label='account of current user'
                 color='inherit'
-                onClick={() => null}
+                onClick={handleOpenMenu}
                 size='large'
             >
                 <MenuIcon />
             </IconButton>
             <Menu
-                anchorEl={null}
+                anchorEl={anchorEl}
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'left',
                 }}
                 id={ID}
                 keepMounted
-                onClose={() => null}
-                open={Boolean(null)}
+                onClose={handleCloseMenu}
+                open={Boolean(anchorEl)}
                 sx={{
                     display: { xs: 'block', md: 'none' },
                 }}
@@ -111,7 +121,7 @@ const MobileNav = ({ links }: TLinkProps) => {
             >
                 <MenuItem
                     component='ul'
-                    onClick={() => null}
+                    onClick={handleCloseMenu}
                     sx={{ flexDirection: 'column' }}
                 >
                     <HeaderLinks links={links} />
@@ -123,9 +133,17 @@ const MobileNav = ({ links }: TLinkProps) => {
 
 const DefaultHeader = ({ isTransparentAtTop, links }: IHeaderProps) => {
     const trigger = useScrollTrigger();
+    const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
     const [headerBgColor, setHeaderBgColor] = useState('');
     const [headerBoxShadow, setHeaderBoxShadow] = useState('');
     const [linkColor, setLinkColor] = useState('');
+
+    const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
 
     useEffect(() => {
         if (trigger) {
@@ -160,7 +178,11 @@ const DefaultHeader = ({ isTransparentAtTop, links }: IHeaderProps) => {
                 <Toolbar
                     component='nav'
                     disableGutters
-                    sx={{ px: { xs: 0 }, justifyContent: 'flex-start', color: 'inherit' }}
+                    sx={{
+                        px: { xs: 0 },
+                        justifyContent: { xs: 'space-between', md: 'flex-start' },
+                        color: 'inherit',
+                    }}
                 >
                     <Box
                         sx={{
@@ -172,7 +194,12 @@ const DefaultHeader = ({ isTransparentAtTop, links }: IHeaderProps) => {
                         <LogoLink imageProps={{ src: '/images/logos/logo-white.png' }} />
                     </Box>
                     <Nav links={links} />
-                    <MobileNav links={links} />
+                    <MobileNav
+                        anchorEl={anchorElNav}
+                        handleCloseMenu={handleCloseNavMenu}
+                        handleOpenMenu={handleOpenNavMenu}
+                        links={links}
+                    />
                 </Toolbar>
             </BodyContainer>
         </AppBar>
