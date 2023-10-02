@@ -42,11 +42,12 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                 <Timeline
                     sx={{
                         pt: '50px',
+                        px: 0,
                     }}
                 >
                     <Typography
                         sx={{
-                            textAlign: 'center',
+                            textAlign: { xs: 'left-align', sm: 'center' },
                             width: 'min(100%, 40ch)',
                             mx: 'auto',
                             pb: '50px',
@@ -60,8 +61,15 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                     {items.map((item) => {
                         return (
                             <TimelineItem key={item.startTime.toString()}>
-                                <TimelineOppositeContent sx={{ color: 'black.main' }}>
-                                    <Typography sx={{ fontWeight: 700 }}>
+                                <TimelineOppositeContent
+                                    sx={{ color: 'black.main', flex: { xs: 0.6, sm: 1 } }}
+                                >
+                                    <Typography
+                                        sx={{
+                                            fontWeight: 700,
+                                            padding: { xs: 0, sm: '6px 16px' },
+                                        }}
+                                    >
                                         <>
                                             {item.startTime} to {item.endTime}
                                         </>
@@ -72,12 +80,31 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                                     <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent sx={{ color: 'black.main' }}>
-                                    <Typography>{item.info} </Typography>
+                                    <Typography
+                                        sx={{ padding: { xs: 0, sm: '6px 16px' } }}
+                                    >
+                                        {item.info}{' '}
+                                    </Typography>
                                     <List>
                                         {item.panelists.map((panelist, index) => {
                                             return (
-                                                <ListItem key={index}>
-                                                    <Typography>
+                                                <ListItem
+                                                    key={index}
+                                                    sx={{
+                                                        padding: {
+                                                            xs: '6px 0',
+                                                            sm: '6px 16px',
+                                                        },
+                                                    }}
+                                                >
+                                                    <Typography
+                                                        sx={{
+                                                            padding: {
+                                                                xs: 0,
+                                                                sm: '6px 16px',
+                                                            },
+                                                        }}
+                                                    >
                                                         {panelist.name}
                                                     </Typography>
                                                 </ListItem>

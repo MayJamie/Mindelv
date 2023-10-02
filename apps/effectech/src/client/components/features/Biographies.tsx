@@ -49,12 +49,12 @@ const Biographies = ({ speakers, registrationLink }: IProps) => {
                                     sx={{
                                         float: 'left',
                                         display: 'block',
-                                        width: 'min(100%, 220px)',
+                                        width: { xs: '100%', sm: 'min(100%, 220px)' },
                                         height: '220px',
                                         objectFit: 'cover',
                                         objectPosition: 'center',
                                         mt: '4px',
-                                        mb: '8px',
+                                        mb: { xs: '24px', sm: '8px' },
                                         mr: '16px',
                                     }}
                                 />

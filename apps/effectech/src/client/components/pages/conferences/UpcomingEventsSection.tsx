@@ -1,5 +1,8 @@
 /** @format */
 
+import imgFlyer1 from 'public/images/events/27-Oct-2023/ai_friend_of_foe_1.jpg';
+import imgFlyer2 from 'public/images/events/27-Oct-2023/ai_friend_of_foe_2.jpg';
+import imgFlyer3 from 'public/images/events/27-Oct-2023/ai_friend_of_foe_3.jpg';
 import imgAleksandra from 'public/images/events/27-Oct-2023/speakers/aleksandra-przegalinska.png';
 import imgPhaedra from 'public/images/events/27-Oct-2023/speakers/phaedra-mohammed.png';
 import imgUrvashi from 'public/images/events/27-Oct-2023/speakers/urvashi-roopnarine.jpg';
@@ -10,8 +13,8 @@ import { components, ui } from 'shared-client';
 import Biographies from '../../features/Biographies';
 import Events from '../../features/Events';
 
-const { Box, Typography } = components;
-const { AppLink } = ui;
+const { Box, Typography, Grid, Container } = components;
+const { AppLink, Image } = ui;
 
 interface IInfo {
     heading: string | ReactNode;
@@ -302,7 +305,7 @@ const speakers: ComponentProps<typeof Biographies>['speakers'] = [
 const UpcomingEventsSection = () => {
     return (
         <Box component='section'>
-            <Box sx={{ mx: 'auto', width: 'max-content' }}>
+            <Container maxWidth='xl' sx={{ mx: 'auto' }}>
                 <Typography
                     sx={{ py: '50px', maxWidth: '30ch', mx: 'auto', textAlign: 'center' }}
                     variant='h2'
@@ -311,7 +314,10 @@ const UpcomingEventsSection = () => {
                 </Typography>
                 {statements.map((statement, index) => {
                     return (
-                        <Box key={index} sx={{ pb: '32px' }}>
+                        <Box
+                            key={index}
+                            sx={{ pb: '32px', maxWidth: 'max-content', mx: 'auto' }}
+                        >
                             <Typography gutterBottom variant='h3'>
                                 {statement.heading}
                             </Typography>
@@ -321,7 +327,7 @@ const UpcomingEventsSection = () => {
                         </Box>
                     );
                 })}
-            </Box>
+            </Container>
             <Events
                 images={[]}
                 items={eventItemData}
@@ -329,9 +335,36 @@ const UpcomingEventsSection = () => {
                 registrationLink='https://brushfire.com/ideffectprovisorylimited/effectechconference/562072'
             />
             <Biographies
-                speakers={speakers}
                 registrationLink='https://brushfire.com/ideffectprovisorylimited/effectechconference/562072'
+                speakers={speakers}
             />
+            <Container maxWidth='xl' sx={{ mx: 'auto' }}>
+                <Typography
+                    sx={{ py: '50px', maxWidth: '30ch', mx: 'auto', textAlign: 'center' }}
+                    variant='h2'
+                >
+                    Event Flyers
+                </Typography>
+                <Grid container sx={{ gap: '30px', justifyContent: 'center' }}>
+                    {[imgFlyer1, imgFlyer2, imgFlyer3].map((img, index) => {
+                        return (
+                            <Grid
+                                item
+                                key={index}
+                                sm={4}
+                                sx={{ position: 'relative', width: '300px' }}
+                                xs={12}
+                            >
+                                <Image
+                                    alt='Event Flyer'
+                                    src={img}
+                                    sx={{ width: '100%', height: 'auto' }}
+                                />
+                            </Grid>
+                        );
+                    })}
+                </Grid>
+            </Container>
         </Box>
     );
 };

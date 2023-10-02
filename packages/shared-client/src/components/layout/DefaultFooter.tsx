@@ -58,7 +58,12 @@ const StackList = ({ children }: TPropsWithChildrenDefault) => {
         <Stack
             component='ul'
             direction='column'
-            sx={{ flexItems: 'center', width: 'max-content', mx: { xs: 0, md: 'auto' } }}
+            sx={{
+                flexItems: 'center',
+                width: 'max-content',
+                mx: { xs: 0, sm: 'auto' },
+                pl: 0,
+            }}
         >
             {children}
         </Stack>
