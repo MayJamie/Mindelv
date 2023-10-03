@@ -18,12 +18,13 @@ const {
     Container,
     List,
     ListItem,
+    useTheme,
 } = components;
 const { Image, AppLink } = ui;
 
 interface IEventItemProps {
-    startTime: string | Date;
-    endTime?: string | Date;
+    startTime: string;
+    endTime?: string;
     info: string;
     panelists: {
         name: string | ReactNode;
@@ -37,6 +38,8 @@ interface IEventItemsProps {
 }
 
 const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => {
+    const theme = useTheme();
+
     return (
         <div>
             <Container maxWidth='lg'>
@@ -74,10 +77,32 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                                         sx={{
                                             fontWeight: 700,
                                             padding: { xs: 0, sm: '6px 16px' },
+                                            [theme.breakpoints.down('sm')]: {
+                                                fontSize: '1.2rem',
+                                            },
                                         }}
                                     >
                                         <>
-                                            {item.startTime} to {item.endTime}
+                                            <Box
+                                                component='span'
+                                                sx={{
+                                                    display: {
+                                                        xs: 'block',
+                                                        sm: 'inline',
+                                                    },
+                                                }}
+                                            >{`${item.startTime} to `}</Box>
+                                            <Box
+                                                component='span'
+                                                sx={{
+                                                    display: {
+                                                        xs: 'block',
+                                                        sm: 'inline',
+                                                    },
+                                                }}
+                                            >
+                                                {item.endTime}
+                                            </Box>
                                         </>
                                     </Typography>
                                 </TimelineOppositeContent>
