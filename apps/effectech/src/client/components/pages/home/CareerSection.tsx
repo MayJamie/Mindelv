@@ -20,7 +20,12 @@ const CareerSection = () => {
                         alignItems: 'flex-start',
                     }}
                 >
-                    <Grid item md={4} sx={{ textAlign: 'center' }} xs={12}>
+                    <Grid
+                        item
+                        md={4}
+                        sx={{ textAlign: { xs: 'left', sm: 'center' } }}
+                        xs={12}
+                    >
                         <Typography gutterBottom variant='h2'>
                             Career Advice
                         </Typography>

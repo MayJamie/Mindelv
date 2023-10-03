@@ -50,7 +50,7 @@ const Biographies = ({ speakers, registrationLink }: IProps) => {
                                         float: 'left',
                                         display: 'block',
                                         width: { xs: '100%', sm: 'min(100%, 220px)' },
-                                        height: '220px',
+                                        height: { xs: 'auto', sm: '220px' },
                                         objectFit: 'cover',
                                         objectPosition: 'center',
                                         mt: '4px',

@@ -39,11 +39,11 @@ function TabPanel(props: TabPanelProps) {
             hidden={value !== index}
             id={`vertical-tabpanel-${index}`}
             role='tabpanel'
-            sx={{ width: 'min(95%, 400px)' }}
+            sx={{ width: 'min(97.5%, 400px)' }}
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3 }}>
+                <Box sx={{ p: { xs: 1, sm: 3 } }}>
                     <Typography>{children}</Typography>
                 </Box>
             )}

@@ -6,6 +6,7 @@ import RegisterButton from '../ui/RegisterButton';
 
 const {
     Grid,
+    Box,
     Timeline,
     TimelineItem,
     TimelineSeparator,
@@ -47,14 +48,19 @@ const Events = ({ name, registrationLink, items, images }: IEventItemsProps) => 
                 >
                     <Typography
                         sx={{
-                            textAlign: { xs: 'left-align', sm: 'center' },
-                            width: 'min(100%, 40ch)',
+                            textAlign: 'center',
+                            width: 'min(100%, 30ch)',
                             mx: 'auto',
                             pb: '50px',
                         }}
                         variant='h2'
                     >
-                        <AppLink href={registrationLink} title='Register today'>
+                        <Box sx={{ pb: '30px' }}>Agenda</Box>
+                        <AppLink
+                            href={registrationLink}
+                            sx={{ fontSize: '75%' }}
+                            title='Register today'
+                        >
                             {name}
                         </AppLink>
                     </Typography>
