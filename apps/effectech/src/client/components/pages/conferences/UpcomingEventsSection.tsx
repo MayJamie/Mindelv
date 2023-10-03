@@ -243,7 +243,7 @@ const speakers: ComponentProps<typeof Biographies>['speakers'] = [
         image: imgAleksandra,
         bio: [
             'Aleksandra Przegalinska  is an Associate Professor and Vice-President of Kozminski University, responsible for International ' +
-                'Relations and ESR as well as Senior Research Associate at the Harvard Labour and Worklife Program.',
+                'Relations and ESR. She is also currently a Senior Research Associate at the Harvard University Centre for Labour and Just Economy.',
             'Aleksandra is the head of the Human-Machine Interaction Research Center at Kozminski University, and the Leader of the AI in Management Program. ' +
                 'Until recently, she conducted post-doctoral research at the Center for Collective Intelligence at the Massachusetts Institute of Technology in Boston.',
             'She graduated from The New School for Social Research in New York. She is the co-author of Collaborative Society ' +
