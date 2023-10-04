@@ -2,7 +2,7 @@
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    // eslint-disable-next-line turbo/no-undeclared-env-vars -- allow
+    /* eslint-disable turbo/no-undeclared-env-vars -- allow */
     siteUrl:
         process.env.SITE_URL ||
         process.env.VERCEL_URL ||
