@@ -12,5 +12,10 @@
             googleScript.setAttribute('src', '/scripts/google.js');
             head.appendChild(googleScript);
         }, 1000);
+        setTimeout(() => {
+            const hjScript = document.createElement('script');
+            hjScript.setAttribute('src', '/scripts/hotjar.js');
+            head.appendChild(hjScript);
+        }, 1200);
     }
 })();
