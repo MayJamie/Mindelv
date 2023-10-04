@@ -35,11 +35,8 @@ const Biographies = ({ speakers, registrationLink }: IProps) => {
             >
                 {speakers.map((speaker) => {
                     return (
-                        <Box key={speaker.name} sx={{ pb: '30px' }}>
-                            <Typography
-                                sx={{ textAlign: 'center', pb: '20px' }}
-                                variant='h4'
-                            >
+                        <Box key={speaker.name} sx={{ pb: '40px' }}>
+                            <Typography sx={{ textAlign: 'center' }} variant='h4'>
                                 {speaker.name}
                             </Typography>
                             <div>
