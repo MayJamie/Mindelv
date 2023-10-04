@@ -48,6 +48,7 @@ const NextAppRootProvider = ({
     pageProps,
     LayoutComponent,
     title,
+    children,
 }: TPropsDefault<TAppPropsWithLayout>) => {
     // Use the layout defined at the page level, if available
     const getLayout =
@@ -70,6 +71,7 @@ const NextAppRootProvider = ({
                             <DefaultHead description={description} title={title} />
                             <DefaultCssBaseline />
                             {getLayout(<Component {...pageProps} />)}
+                            {children}
                         </>
                     </PageProvider>
                 </CacheProvider>
