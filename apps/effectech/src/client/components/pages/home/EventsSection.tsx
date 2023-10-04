@@ -3,6 +3,7 @@
 import imgEventFlyer1 from 'public/images/events/27-Oct-2023/ai_friend_of_foe_1.jpg';
 import { components, ui } from 'shared-client';
 import { CONSTANT } from 'shared-lib';
+import { REGISTRATION_URL_MAP } from '../../../../lib/constants/routes/url';
 import RegisterButton from '../../ui/RegisterButton';
 
 const { Box, Container, Grid, Typography, ButtonGroup } = components;
@@ -43,7 +44,7 @@ const EventsSection = () => {
                         <ButtonGroup sx={{ mt: '20px' }}>
                             <RegisterButton
                                 color='primary'
-                                href='https://brushfire.com/ideffectprovisorylimited/effectechconference/562072'
+                                href={REGISTRATION_URL_MAP['27-Oct-2023']}
                                 sx={{ my: 0 }}
                             />
                             <LinkButton color='secondary' href='/conferences'>

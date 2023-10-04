@@ -2,6 +2,7 @@
 
 import { components, icons, ui } from 'shared-client';
 import { CONSTANT } from 'shared-lib';
+import { CAREERSIGHT_URL } from '../../../../lib/constants/routes/url';
 
 const { Box, Container, Grid, Typography, Button } = components;
 const { AppLink } = ui;
@@ -31,14 +32,12 @@ const CareerSection = () => {
                         </Typography>
                         <Typography gutterBottom variant='body1'>
                             Visit our{' '}
-                            <AppLink href='https://careersight.vercel.app/'>
-                                Careersight website
-                            </AppLink>{' '}
+                            <AppLink href={CAREERSIGHT_URL}>Careersight website</AppLink>{' '}
                             for more details!
                         </Typography>
                         <Button
                             LinkComponent={AppLink}
-                            href='https://careersight.vercel.app/'
+                            href={CAREERSIGHT_URL}
                             startIcon={<LaunchIcon fontSize='inherit' />}
                             sx={{ mt: '16px' }}
                             variant='contained'

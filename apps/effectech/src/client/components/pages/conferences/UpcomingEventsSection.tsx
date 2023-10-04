@@ -10,6 +10,7 @@ import imgZameer from 'public/images/events/27-Oct-2023/speakers/zameer-mohammed
 import imgRoger from 'public/images/profiles/RogerStHilaire.png';
 import type { ComponentProps, ReactNode } from 'react';
 import { components, ui } from 'shared-client';
+import { REGISTRATION_URL_MAP } from '../../../../lib/constants/routes/url';
 import Biographies from '../../features/Biographies';
 import Events from '../../features/Events';
 
@@ -207,9 +208,7 @@ const statements: IInfo[] = [
     },
     {
         heading: (
-            <AppLink href='https://brushfire.com/ideffectprovisorylimited/effectechconference/562072'>
-                Register Now
-            </AppLink>
+            <AppLink href={REGISTRATION_URL_MAP['27-Oct-2023']}>Register Now</AppLink>
         ),
         body:
             "Seize this opportunity to be a part of the educational revolution. Together, we'll answer " +
@@ -337,10 +336,10 @@ const UpcomingEventsSection = () => {
                 images={[]}
                 items={eventItemData}
                 name='Artificial Intelligence & Analytics in Education: Friend or Foe?'
-                registrationLink='https://brushfire.com/ideffectprovisorylimited/effectechconference/562072'
+                registrationLink={REGISTRATION_URL_MAP['27-Oct-2023']}
             />
             <Biographies
-                registrationLink='https://brushfire.com/ideffectprovisorylimited/effectechconference/562072'
+                registrationLink={REGISTRATION_URL_MAP['27-Oct-2023']}
                 speakers={speakers}
             />
             <Container maxWidth='xl' sx={{ mx: 'auto' }}>

@@ -1,5 +1,16 @@
 /** @format */
 
+export const CAREERSIGHT_URL_MAP = {
+    development: 'http://localhost:3001',
+    preview: 'https://careersight.vercel.app/',
+    production: 'https://careersight.vercel.app/',
+} as const;
+export const EFFECTECH_URL_MAP = {
+    development: 'http://localhost:3002',
+    preview: 'https://effectechconference.vercel.app/',
+    production: 'https://effectechconference.vercel.app/',
+} as const;
+
 export const APP_ANCHOR_TAG = {
     BOTTOM: 'bottom',
     CONTACT: 'contact',
