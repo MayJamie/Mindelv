@@ -1,5 +1,6 @@
 /** @format */
 
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import { context } from 'shared-client';
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps, ...rest }: AppProps) {
                 strategy='lazyOnload'
             />
             <Script src='../scripts/index.js' strategy='lazyOnload' />
+            <Analytics />
         </NextAppRootProvider>
     );
 }

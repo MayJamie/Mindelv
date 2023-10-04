@@ -41,6 +41,9 @@ importers:
 
   apps/careersight:
     dependencies:
+      '@vercel/analytics':
+        specifier: ^1.0.2
+        version: 1.0.2
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -99,6 +102,9 @@ importers:
 
   apps/effectech:
     dependencies:
+      '@vercel/analytics':
+        specifier: ^1.0.2
+        version: 1.0.2
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1815,6 +1821,10 @@ packages:
       '@typescript-eslint/types': 6.5.0
       eslint-visitor-keys: 3.4.3
     dev: true
+
+  /@vercel/analytics@1.0.2:
+    resolution: {integrity: sha512-BZFxVrv24VbNNl5xMxqUojQIegEeXMI6rX3rg1uVLYUEXsuKNBSAEQf4BWEcjQDp/8aYJOj6m8V4PUA3x/cxgg==}
+    dev: false
 
   /@vercel/style-guide@5.0.0(eslint@8.48.0)(prettier@3.0.3)(typescript@5.2.2):
     resolution: {integrity: sha512-z8EbEyZm5Zn6AOa+XJ7dOja94m5Hm6cgCuTRK74qxKFWi7qQYUJoEkU27wYgOplZSAYVLB8mHfe51RGZMyqiUw==}
