@@ -7,7 +7,7 @@ const { CAREERSIGHT_URL_MAP } = CONSTANT;
 
 const ENV = process.env.NEXT_PUBLIC_VERCEL_ENV || process.env.NODE_ENV;
 
-export const CAREERSIGHT_URL = (process.env.CAREERSIGHT_URL ||
+export const CAREERSIGHT_URL = (process.env.NEXT_PUBLIC_CAREERSIGHT_URL ||
     CAREERSIGHT_URL_MAP[ENV] ||
     'https://careersight.vercel.app/') as string;
 
