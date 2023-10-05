@@ -3,13 +3,17 @@
 export const CAREERSIGHT_URL_MAP = {
     development: 'http://localhost:3001',
     preview: 'https://careersight.vercel.app/',
-    production: 'https://careersight.ideffect.com/',
+    production: 'https://careersight.vercel.app/',
+    // TODO: fix DNS issues
+    // production: 'https://careersight.ideffect.com/',
 } as const;
 
 export const EFFECTECH_URL_MAP = {
     development: 'http://localhost:3002',
     preview: 'https://effectechconference.vercel.app/',
-    production: 'https://effectech.ideffect.com/',
+    production: 'https://www.effectechconference.com/',
+    // TODO: fix DNS issues
+    // production: 'https://effectech.ideffect.com/',
 } as const;
 
 export const APP_ANCHOR_TAG = {
