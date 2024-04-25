@@ -15,8 +15,8 @@ export default async function HomePage() {
             }}
         >
             <Image src={logo} alt='logo' />
-            <h1>I'dEffect Academy</h1>
-            <h2>Coming Soon...</h2>
+            <h1 style={{ fontSize: '64px' }}>Academy</h1>
+            <p>Coming Soon...</p>
         </div>
     );
 }
