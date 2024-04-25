@@ -6,7 +6,7 @@ module.exports = {
     siteUrl:
         process.env.SITE_URL ||
         process.env.VERCEL_URL ||
-        'https://effectech.ideffect.com/',
+        'https://academy.ideffect.com/',
     generateRobotsTxt: true, // (optional)
     // ...other options
 };

@@ -39,6 +39,64 @@ importers:
         specifier: latest
         version: 1.10.14
 
+  apps/academy:
+    dependencies:
+      '@vercel/analytics':
+        specifier: ^1.0.2
+        version: 1.0.2
+      clsx:
+        specifier: ^2.0.0
+        version: 2.0.0
+      next:
+        specifier: ^13.4.19
+        version: 13.4.19(react-dom@18.2.0)(react@18.2.0)
+      next-sitemap:
+        specifier: ^4.2.3
+        version: 4.2.3(next@13.4.19)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      shared-client:
+        specifier: workspace:*
+        version: link:../../packages/shared-client
+      shared-lib:
+        specifier: workspace:*
+        version: link:../../packages/shared-lib
+      shared-server:
+        specifier: workspace:*
+        version: link:../../packages/shared-server
+      sharp:
+        specifier: ^0.32.6
+        version: 0.32.6
+    devDependencies:
+      '@next/eslint-plugin-next':
+        specifier: ^13.4.19
+        version: 13.4.19
+      '@types/node':
+        specifier: ^20.5.2
+        version: 20.5.2
+      '@types/react':
+        specifier: ^18.2.0
+        version: 18.2.5
+      '@types/react-dom':
+        specifier: ^18.2.0
+        version: 18.2.3
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      shared-types:
+        specifier: workspace:*
+        version: link:../../packages/shared-types
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: ^5.0.0
+        version: 5.2.2
+
   apps/careersight:
     dependencies:
       '@vercel/analytics':
