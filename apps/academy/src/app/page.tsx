@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import logo from 'public/logos/logo-white.png';
 
-export default async function HomePage() {
+export default function HomePage() {
     return (
         <div
             style={{
