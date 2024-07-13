@@ -7,7 +7,7 @@ import { CONSTANT } from 'shared-lib';
 const { Box, Container, Typography, Button } = components;
 const { Image, AppLink } = ui;
 
-const { STYLE_HEIGHT_HEADER, CLASS_SECTION_ANIMATED_BG } = CONSTANT;
+const { CLASS_SECTION_ANIMATED_BG } = CONSTANT;
 
 const HeroSection = () => {
     return (
@@ -16,14 +16,23 @@ const HeroSection = () => {
             component='section'
             sx={{
                 display: 'flex',
-                height: 450,
-                marginTop: `-${STYLE_HEIGHT_HEADER}`,
-                paddingBottom: 2,
-                position: 'relative',
+                minHeight: 450,
+                pt: { xs: 4, md: 2 },
+                pb: 2,
             }}
         >
-            <Container maxWidth='xl' sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                <Box sx={{ paddingLeft: { md: 8 }, paddingBottom: 10 }}>
+            <Container
+                maxWidth='xl'
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    columnGap: 1,
+                    rowGap: 8,
+                }}
+            >
+                <Box sx={{ textAlign: { xs: 'center', lg: 'left' } }}>
                     <Typography
                         gutterBottom
                         maxWidth='clamp(5ch, 100%, 20ch)'
@@ -34,6 +43,7 @@ const HeroSection = () => {
                                 md: '5rem',
                             },
                             color: 'black.main',
+                            mx:{sm: 'auto', lg: 'initial'},
                         }}
                         variant='h1'
                     >
@@ -43,6 +53,7 @@ const HeroSection = () => {
                         color='black.main'
                         gutterBottom
                         maxWidth='clamp(10ch, 100%, 60ch)'
+                        sx={{ mx:{sm: 'auto', lg: 'initial'} }}
                         variant='body1'
                     >
                         Working to help you Unleash Your Potential
@@ -57,11 +68,7 @@ const HeroSection = () => {
                     </Button>
                 </Box>
                 <Box>
-                    <Image
-                        alt=''
-                        src={hero}
-                        sx={{ borderRadius: '4px', width: '100%', height: 'auto' }}
-                    />
+                    <Image alt='' src={hero} sx={{ width: '100%', height: 'auto' }} />
                 </Box>
             </Container>
         </Box>

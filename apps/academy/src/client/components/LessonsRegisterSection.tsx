@@ -32,9 +32,14 @@ const LessonsRegisterSection = () => {
                         <Typography gutterBottom variant='h2'>
                             Registration
                         </Typography>
-                        <Typography gutterBottom variant='body1'>
-                            Please select the link below to gain access to the I&apos;deffect
-                            Academy Summer Classes Registration Form
+                        <Typography
+                            gutterBottom
+                            maxWidth='clamp(10ch, 100%, 60ch)'
+                            sx={{ mx: 'auto' }}
+                            variant='body1'
+                        >
+                            Please select the link below to gain access to the
+                            I&apos;deffect Academy Summer Classes Registration Form
                         </Typography>
                         <Button
                             LinkComponent={AppLink}

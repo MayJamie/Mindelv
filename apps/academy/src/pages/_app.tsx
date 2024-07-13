@@ -19,8 +19,8 @@ export default function App({ Component, pageProps, ...rest }: AppProps) {
             Component={Component}
             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- temp
             LayoutComponent={AppLayout}
-            description='Find out more about our E-Learning and Career Advisor services'
-            title="Careersight | I'deffect"
+            description='Find out more about our online lessons platform'
+            title="Academy | I'deffect"
             {...rest}
             /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
              -- allow any for Next.js pageProps */
@@ -30,7 +30,7 @@ export default function App({ Component, pageProps, ...rest }: AppProps) {
                 src='https://www.googletagmanager.com/gtag/js?id=G-D44DQW2951'
                 strategy='lazyOnload'
             />
-            <Script src='../scripts/index.js' strategy='lazyOnload' />
+            {/* <Script src='../scripts/index.js' strategy='lazyOnload' /> */}
             <Analytics />
         </NextAppRootProvider>
     );
