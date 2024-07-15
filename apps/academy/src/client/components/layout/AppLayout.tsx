@@ -8,7 +8,7 @@ const { DefaultHeader, DefaultFooter, DefaultLayout } = layout;
 
 const links = [
     { href: '/', children: 'Home' },
-    { href: 'https://google.com', children: 'Head to Class' },
+    { href: 'https://classroom.google.com', children: 'Head to Class' },
 ];
 
 type TAppHeader = ComponentProps<typeof DefaultHeader>;

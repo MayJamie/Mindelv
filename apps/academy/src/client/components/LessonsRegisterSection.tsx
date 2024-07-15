@@ -48,7 +48,7 @@ const LessonsRegisterSection = () => {
                             sx={{ mt: '16px' }}
                             variant='outlined'
                         >
-                            Register
+                            Register Now
                         </Button>
                     </Grid>
                 </Grid>

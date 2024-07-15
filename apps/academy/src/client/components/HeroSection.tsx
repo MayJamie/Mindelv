@@ -60,7 +60,7 @@ const HeroSection = () => {
                     </Typography>
                     <Button
                         LinkComponent={AppLink}
-                        href='/'
+                        href='https://classroom.google.com'
                         sx={{ mt: '16px' }}
                         variant='contained'
                     >
