@@ -6,8 +6,11 @@ import type { TPropsWithChildrenDefault } from 'shared-types';
 
 const { DefaultHeader, DefaultFooter, DefaultLayout } = layout;
 
+export const REGISTRATION_URL = 'https://forms.gle/tXmCPJj6Sc2hnaPJ7';
+
 const links = [
     { href: '/', children: 'Home' },
+    { href: REGISTRATION_URL, children: 'Class Registration' },
     { href: 'https://classroom.google.com', children: 'Head to Class' },
 ];
 
@@ -22,7 +25,7 @@ const AppHeader = (props: TAppHeader) => {
 };
 
 const AppFooter = (props: TAppFooter) => {
-    return <DefaultFooter {...props} links={links} />;
+    return <DefaultFooter {...props} links={links.slice(0, 3)} />;
 };
 
 const AppLayout = ({

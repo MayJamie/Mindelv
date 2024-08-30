@@ -40,7 +40,7 @@ const HeroSection = () => {
                             fontSize: {
                                 xs: '3rem',
                                 sm: '4rem',
-                                md: '5rem',
+                                md: '5.2rem',
                             },
                             color: 'black.main',
                             mx:{sm: 'auto', lg: 'initial'},

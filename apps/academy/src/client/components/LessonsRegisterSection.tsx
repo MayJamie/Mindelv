@@ -1,5 +1,6 @@
 /** @format */
 
+import { REGISTRATION_URL } from '@@components/layout/AppLayout';
 import { components, icons, ui } from 'shared-client';
 import { CONSTANT } from 'shared-lib';
 
@@ -7,8 +8,6 @@ const { Box, Container, Grid, Typography, Button } = components;
 const { AppLink } = ui;
 const { LaunchIcon } = icons;
 const { CLASS_SECTION_ANIMATED_BG } = CONSTANT;
-
-const REGISTRATION_URL = 'https://forms.gle/yYRxbKxyWBvBTCS79';
 
 const LessonsRegisterSection = () => {
     return (
@@ -43,7 +42,7 @@ const LessonsRegisterSection = () => {
                         </Typography>
                         <Button
                             LinkComponent={AppLink}
-                            href={REGISTRATION_URL}
+                            href={`${REGISTRATION_URL}`}
                             startIcon={<LaunchIcon fontSize='inherit' />}
                             sx={{ mt: '16px' }}
                             variant='outlined'
