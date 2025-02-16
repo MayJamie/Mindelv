@@ -12,6 +12,8 @@ const links = [
     { href: '/', children: 'Home' },
     { href: REGISTRATION_URL, children: 'Class Registration' },
     { href: 'https://classroom.google.com', children: 'Head to Class' },
+    { href: '/chatbot', children: 'MindelvGPT'},
+    
 ];
 
 type TAppHeader = ComponentProps<typeof DefaultHeader>;

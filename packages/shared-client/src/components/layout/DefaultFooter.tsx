@@ -80,6 +80,7 @@ const DefaultFooter = ({ links }: IFooterProps) => {
                     children: 'Facebook',
                 },
                 { href: EXTERNAL_URL.LINKEDIN, children: 'LinkedIn' },
+                { href: EXTERNAL_URL.YOUTUBE, children: 'YouTube'},
             ],
             heading: 'Social Media',
         },

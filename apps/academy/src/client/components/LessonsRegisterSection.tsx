@@ -37,7 +37,7 @@ const LessonsRegisterSection = () => {
                             sx={{ mx: 'auto' }}
                             variant='body1'
                         >
-                            Please select the link below to gain access to the
+                            Please click the link below to gain access to the
                             I&apos;deffect Academy Summer Classes Registration Form
                         </Typography>
                         <Button

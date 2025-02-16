@@ -25,4 +25,5 @@ export const APP_ANCHOR_TAG = {
 export const EXTERNAL_URL = {
     FACEBOOK: 'https://www.facebook.com/ideffect?mibextid=ZbWKwL',
     LINKEDIN: 'https://www.linkedin.com/company/ideffect/',
+    YOUTUBE:  'https://youtube.com/@ideffect-l5w?si=v1CoxaUtrYrs5Y-i',
 } as const;
