@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Typography, TextField, Button, CircularProgress } from "@mui/material";
-import { CONSTANT } from "shared-lib"; // Import constants
+import { CONSTANT } from "shared-lib";
 
 const { CLASS_SECTION_ANIMATED_BG } = CONSTANT;
 
@@ -61,7 +61,7 @@ const Chatbot = () => {
         }
     };
 
-    // Handle enter key press
+    // Enter key to send message.
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             sendMessage();
@@ -146,7 +146,7 @@ const Chatbot = () => {
                                 textAlign: msg.role === "user" ? "right" : "left",
                             }}
                         >
-                            {/* Use dangerouslySetInnerHTML to render formatted HTML */}
+                            {/* DangerouslySetInnerHTML to render formatted HTML */}
                             <div
                                 dangerouslySetInnerHTML={{ __html: msg.content }}
                             />
