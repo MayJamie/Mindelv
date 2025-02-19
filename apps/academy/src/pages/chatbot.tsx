@@ -61,7 +61,7 @@ const Chatbot = () => {
         }
     };
 
-    // Enter key to send message.
+    // Enter key to send message for accessibility.
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
             sendMessage();
